@@ -34,6 +34,12 @@ const Filter = ({ ingredients }: FilterProps) => {
             <span>{item.strIngredient}</span>
           </Link>
         ))}
+
+        {filteredIngredients.length === 0 && (
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <p className="text-2xl">No ingredients found</p>
+          </div>
+        )}
       </div>
     </div>
   );
